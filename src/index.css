@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@import "@fontsource/cinzel/400.css"; /* Regular weight */
+@import "@fontsource/cinzel/500.css"; /* Medium weight */
+@import "@fontsource/cinzel/700.css"; /* Bold weight */
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: url("/images/void.png");
+  background-repeat: repeat;
+  cursor: url("/images/cursor-default.png"), auto;
+  @apply bg-gray-900;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.logo {
+  max-width: 400px;
+  height: auto;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.overflow-y-auto::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.overflow-y-auto {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

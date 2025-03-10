@@ -21,7 +21,7 @@ function App() {
           </div>
         </div>
       </header>
-
+      <hr className="border-amber-50 opacity-35 py-2"></hr>
       {/* Main Content Area */}
       <main className="flex-1 overflow-y-auto px-6 pb-24">
         <div className="max-w-screen-xl mx-auto">

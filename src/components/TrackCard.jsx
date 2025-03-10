@@ -2,7 +2,7 @@ import { BsPlayFill } from "react-icons/bs";
 
 function TrackCard({ title, tag, duration, picture }) {
   // Use default image if picture is empty
-  const imageSrc = picture ? `/images/${picture}` : "/images/homm3.jpg";
+  const imageSrc = picture ? `/images/${picture}` : "/images/homm3def.jpg";
 
   return (
     <div className="flex flex-col bg-gray-800/50 rounded-lg overflow-hidden hover:bg-gray-700/50 transition-colors cursor-pointer group">

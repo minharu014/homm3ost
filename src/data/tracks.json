@@ -10,7 +10,7 @@
   {
     "id": "2",
     "title": "UltimateLose",
-    "tag": "Lose",
+    "tag": "Battle",
     "duration": "00:24",
     "picture": "/images/default-track.jpg",
     "src": "/tracks/UltimateLose.mp3"
@@ -138,7 +138,7 @@
   {
     "id": "18",
     "title": "Lose Campain",
-    "tag": "Lose",
+    "tag": "Battle",
     "duration": "00:35",
     "picture": "/images/default-track.jpg",
     "src": "/tracks/Lose Campain.mp3"
@@ -146,7 +146,7 @@
   {
     "id": "19",
     "title": "LoseCastle",
-    "tag": "Lose",
+    "tag": "Battle",
     "duration": "00:08",
     "picture": "/images/default-track.jpg",
     "src": "/tracks/LoseCastle.mp3"
@@ -154,7 +154,7 @@
   {
     "id": "20",
     "title": "LoseCombat",
-    "tag": "Lose",
+    "tag": "Battle",
     "duration": "00:11",
     "picture": "/images/default-track.jpg",
     "src": "/tracks/LoseCombat.mp3"

@@ -44,7 +44,7 @@
     "title": "StrongHold",
     "tag": "Town",
     "duration": "02:06",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/stronghold.jpg",
     "src": "/tracks/StrongHold.mp3"
   },
   {
@@ -65,10 +65,10 @@
   },
   {
     "id": "9",
-    "title": "TowerTown",
+    "title": "Tower",
     "tag": "Town",
     "duration": "03:24",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/tower.jpg",
     "src": "/tracks/TowerTown.mp3"
   },
   {
@@ -105,10 +105,10 @@
   },
   {
     "id": "14",
-    "title": "necroTown",
+    "title": "Necropolis",
     "tag": "Town",
     "duration": "02:18",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/necro.jpg",
     "src": "/tracks/necroTown.mp3"
   },
   {
@@ -121,10 +121,10 @@
   },
   {
     "id": "16",
-    "title": "RAMPART",
+    "title": "Rampart",
     "tag": "Town",
     "duration": "02:30",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/rampart.jpg",
     "src": "/tracks/RAMPART.MP3"
   },
   {
@@ -177,10 +177,10 @@
   },
   {
     "id": "23",
-    "title": "InfernoTown",
+    "title": "Inferno",
     "tag": "Town",
     "duration": "02:06",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/inferno.jpg",
     "src": "/tracks/InfernoTown.mp3"
   },
   {
@@ -201,18 +201,18 @@
   },
   {
     "id": "26",
-    "title": "DUNGEON",
+    "title": "Dungeon",
     "tag": "Town",
     "duration": "02:06",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/dungeon.jpg",
     "src": "/tracks/DUNGEON.MP3"
   },
   {
     "id": "27",
-    "title": "ElemTown",
+    "title": "Conflux",
     "tag": "Town",
     "duration": "01:18",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/conflux.jpg",
     "src": "/tracks/ElemTown.mp3"
   },
   {
@@ -225,10 +225,10 @@
   },
   {
     "id": "29",
-    "title": "FortressTown",
+    "title": "Fortress",
     "tag": "Town",
     "duration": "01:48",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/fortress.jpg",
     "src": "/tracks/FortressTown.mp3"
   },
   {
@@ -249,10 +249,10 @@
   },
   {
     "id": "32",
-    "title": "CstleTown",
+    "title": "Castle",
     "tag": "Town",
     "duration": "02:24",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/castle.jpg",
     "src": "/tracks/CstleTown.mp3"
   },
   {

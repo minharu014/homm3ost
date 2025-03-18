@@ -24,6 +24,33 @@ function App() {
     setCurrentTrack({ ...track, audio: newAudio });
   };
 
+  // Function to sort and group tracks by tag
+  const sortAndGroupTracks = (tracks) => {
+    const townTracks = tracks.filter(
+      (track) => track.tag.toLowerCase() === "town"
+    );
+    const battleTracks = tracks.filter(
+      (track) => track.tag.toLowerCase() === "battle"
+    );
+    const aiThemeTracks = tracks.filter((track) =>
+      track.tag.toLowerCase().includes("theme")
+    );
+    const otherTracks = tracks.filter(
+      (track) =>
+        !["town", "battle"].includes(track.tag.toLowerCase()) &&
+        !track.tag.toLowerCase().includes("theme")
+    );
+
+    return [
+      { tag: "TOWN", tracks: townTracks },
+      { tag: "BATTLE", tracks: battleTracks },
+      { tag: "AI THEMES", tracks: aiThemeTracks },
+      { tag: "OTHER", tracks: otherTracks },
+    ];
+  };
+
+  const groupedTracks = sortAndGroupTracks(tracksData);
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header/Nav with Logo */}
@@ -46,19 +73,29 @@ function App() {
       <main className="flex-1 overflow-y-auto px-6 pb-24">
         <div className="max-w-screen-xl mx-auto">
           {/* Grid of Cards */}
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3">
-            {tracksData.map((track) => (
-              <TrackCard
-                key={track.id}
-                title={track.title}
-                tag={track.tag}
-                duration={track.duration}
-                picture={track.picture}
-                src={track.src}
-                onSelect={handleTrackSelect}
-              />
-            ))}
-          </div>
+          {groupedTracks.map((group, index) => (
+            <div key={group.tag}>
+              <h2 className="text-yellow-500 font-cinzel font-medium text-lg mb-2">
+                {group.tag}
+              </h2>
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3">
+                {group.tracks.map((track) => (
+                  <TrackCard
+                    key={track.id}
+                    title={track.title}
+                    tag={track.tag}
+                    duration={track.duration}
+                    picture={track.picture}
+                    src={track.src}
+                    onSelect={handleTrackSelect}
+                  />
+                ))}
+              </div>
+              {index < groupedTracks.length - 1 && (
+                <hr className="my-4 border-gray-700" />
+              )}
+            </div>
+          ))}
         </div>
       </main>
 

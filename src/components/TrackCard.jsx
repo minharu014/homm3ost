@@ -10,7 +10,7 @@ function TrackCard({ title, tag, duration, picture, src, onSelect }) {
       className="flex flex-col bg-gray-800/50 rounded-lg overflow-hidden hover:bg-gray-700/50 transition-colors cursor-pointer group"
     >
       <div className="relative">
-        <img src={imageSrc} alt={title} className="w-full h-24 object-cover" />
+        <img src={picture} alt={title} className="w-full h-24 object-cover" />
       </div>
       <div className="p-2 flex flex-col min-h-[3rem]">
         <h3 className="text-yellow-500 font-cinzel font-medium text-sm truncate">

@@ -1,9 +1,20 @@
+import { useState } from "react";
 import TrackCard from "./components/TrackCard";
 import Player from "./components/Player";
 import "@fontsource/cinzel";
 import tracksData from "./data/tracks.json";
 
 function App() {
+  const [currentTrack, setCurrentTrack] = useState(null);
+
+  const handleTrackSelect = (track) => {
+    setCurrentTrack(track);
+    // Automatically play the selected track
+    if (currentTrack && currentTrack.audio) {
+      currentTrack.audio.play();
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header/Nav with Logo */}
@@ -34,13 +45,15 @@ function App() {
                 tag={track.tag}
                 duration={track.duration}
                 picture={track.picture}
+                src={track.src}
+                onSelect={handleTrackSelect}
               />
             ))}
           </div>
         </div>
       </main>
 
-      <Player />
+      <Player currentTrack={currentTrack} />
     </div>
   );
 }

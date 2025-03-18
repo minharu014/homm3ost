@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   BsPlayFill,
   BsPauseFill,
@@ -6,7 +7,49 @@ import {
   BsVolumeUp,
 } from "react-icons/bs";
 
-function Player() {
+function Player({ currentTrack }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [volume, setVolume] = useState(0.5);
+  const [audio, setAudio] = useState(null);
+
+  useEffect(() => {
+    if (currentTrack) {
+      const newAudio = new Audio(currentTrack.src);
+      newAudio.volume = volume;
+      setAudio(newAudio);
+      // Automatically play the new track
+      newAudio.play();
+      setIsPlaying(true);
+    } else {
+      if (audio) {
+        audio.pause();
+        setIsPlaying(false);
+      }
+    }
+  }, [currentTrack, volume]);
+
+  const togglePlay = () => {
+    if (audio) {
+      if (isPlaying) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  const skipTrack = (direction) => {
+    // Implement logic to skip to previous or next track
+    console.log(`Skipping ${direction === -1 ? "backward" : "forward"}`);
+  };
+
+  const handleVolumeChange = (e) => {
+    const newVolume = e.target.value / 100;
+    setVolume(newVolume);
+    if (audio) audio.volume = newVolume;
+  };
+
   return (
     <footer className="fixed bottom-0 left-0 right-0 bg-gray-900/90 border-t border-yellow-900/30 backdrop-blur-sm">
       <div className="max-w-screen-xl mx-auto px-6 py-2">
@@ -16,21 +59,36 @@ function Player() {
             <div className="w-8 h-8 bg-gray-800/50 rounded"></div>
             <div>
               <h4 className="text-yellow-500 font-cinzel font-medium text-xs">
-                Now Playing
+                {currentTrack ? currentTrack.title : "Now Playing"}
               </h4>
-              <p className="text-gray-400 text-xs">Track Artist</p>
+              <p className="text-gray-400 text-xs">
+                {currentTrack ? currentTrack.tag : "Track Artist"}
+              </p>
             </div>
           </div>
 
           {/* Player Controls */}
           <div className="flex items-center space-x-4">
-            <button className="text-yellow-500 hover:text-yellow-400 transition-colors">
+            <button
+              onClick={() => skipTrack(-1)}
+              className="text-yellow-500 hover:text-yellow-400 transition-colors"
+            >
               <BsSkipBackwardFill className="text-sm" />
             </button>
-            <button className="text-yellow-500 hover:text-yellow-400 transition-colors">
-              <BsPlayFill className="text-xl" />
+            <button
+              onClick={togglePlay}
+              className="text-yellow-500 hover:text-yellow-400 transition-colors"
+            >
+              {isPlaying ? (
+                <BsPauseFill className="text-xl" />
+              ) : (
+                <BsPlayFill className="text-xl" />
+              )}
             </button>
-            <button className="text-yellow-500 hover:text-yellow-400 transition-colors">
+            <button
+              onClick={() => skipTrack(1)}
+              className="text-yellow-500 hover:text-yellow-400 transition-colors"
+            >
               <BsSkipForwardFill className="text-sm" />
             </button>
           </div>
@@ -38,9 +96,14 @@ function Player() {
           {/* Volume Control */}
           <div className="flex items-center space-x-2 w-24">
             <BsVolumeUp className="text-yellow-500 text-xs" />
-            <div className="flex-1 h-0.5 bg-gray-700/50 rounded-full">
-              <div className="h-full w-1/2 bg-yellow-500 rounded-full"></div>
-            </div>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value={volume * 100}
+              onChange={handleVolumeChange}
+              className="flex-1 h-0.5 bg-gray-700/50 rounded-full appearance-none"
+            />
           </div>
         </div>
       </div>

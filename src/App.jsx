@@ -8,11 +8,20 @@ function App() {
   const [currentTrack, setCurrentTrack] = useState(null);
 
   const handleTrackSelect = (track) => {
-    setCurrentTrack(track);
-    // Automatically play the selected track
+    // Stop the current track if it's playing
     if (currentTrack && currentTrack.audio) {
-      currentTrack.audio.play();
+      currentTrack.audio.pause();
     }
+
+    // Set the new track as current
+    setCurrentTrack(track);
+
+    // Create a new Audio object for the selected track
+    const newAudio = new Audio(track.src);
+    newAudio.play();
+
+    // Update the current track with the new Audio object
+    setCurrentTrack({ ...track, audio: newAudio });
   };
 
   return (

@@ -10,30 +10,24 @@ import {
 function Player({ currentTrack }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(0.5);
-  const [audio, setAudio] = useState(null);
 
   useEffect(() => {
-    if (currentTrack) {
-      const newAudio = new Audio(currentTrack.src);
-      newAudio.volume = volume;
-      setAudio(newAudio);
+    if (currentTrack && currentTrack.audio) {
+      currentTrack.audio.volume = volume;
       // Automatically play the new track
-      newAudio.play();
+      currentTrack.audio.play();
       setIsPlaying(true);
     } else {
-      if (audio) {
-        audio.pause();
-        setIsPlaying(false);
-      }
+      setIsPlaying(false);
     }
   }, [currentTrack, volume]);
 
   const togglePlay = () => {
-    if (audio) {
+    if (currentTrack && currentTrack.audio) {
       if (isPlaying) {
-        audio.pause();
+        currentTrack.audio.pause();
       } else {
-        audio.play();
+        currentTrack.audio.play();
       }
       setIsPlaying(!isPlaying);
     }
@@ -47,7 +41,9 @@ function Player({ currentTrack }) {
   const handleVolumeChange = (e) => {
     const newVolume = e.target.value / 100;
     setVolume(newVolume);
-    if (audio) audio.volume = newVolume;
+    if (currentTrack && currentTrack.audio) {
+      currentTrack.audio.volume = newVolume;
+    }
   };
 
   return (

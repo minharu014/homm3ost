@@ -14,7 +14,7 @@ function Player({ currentTrack }) {
   useEffect(() => {
     if (currentTrack && currentTrack.audio) {
       currentTrack.audio.volume = volume;
-      // Automatically play the new track
+      //play the new track
       currentTrack.audio.play();
       setIsPlaying(true);
     } else {

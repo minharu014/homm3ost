@@ -5,7 +5,12 @@ import {
   BsVolumeUp,
   BsVolumeMute,
 } from "react-icons/bs";
-import { GiCrossedSwords, GiLaurelCrown, GiTombstone } from "react-icons/gi";
+import {
+  GiCrossedSwords,
+  GiLaurelCrown,
+  GiTombstone,
+  GiSwordClash,
+} from "react-icons/gi";
 import ElasticSlider from "./ElasticSlider";
 
 function Player({ currentTrack }) {
@@ -214,9 +219,11 @@ function Player({ currentTrack }) {
     // Stop current track and battle audio if playing
     if (currentTrack && currentTrack.audio) {
       currentTrack.audio.pause();
+      currentTrack.audio.currentTime = 0;
     }
     if (battleAudio) {
       battleAudio.pause();
+      battleAudio.currentTime = 0;
       setBattleAudio(null);
     }
 
@@ -246,49 +253,70 @@ function Player({ currentTrack }) {
   };
 
   const playBattleMusic = () => {
-    // Don't allow multiple clicks while battle music is playing
-    if (battleAudio) return;
+    // First play random Battle sound (as the toggle)
+    const battleSounds = [
+      "BATTLE00.mp3",
+      "BATTLE01.mp3",
+      "BATTLE02.mp3",
+      "BATTLE03.mp3",
+      "BATTLE04.mp3",
+      "BATTLE05.mp3",
+      "BATTLE06.mp3",
+      "BATTLE07.mp3",
+    ];
+    const randomSoundIndex = Math.floor(Math.random() * battleSounds.length);
+    const selectedSound = battleSounds[randomSoundIndex];
 
-    // Stop current track if playing
+    // Stop any currently playing track
     if (currentTrack && currentTrack.audio) {
       currentTrack.audio.pause();
+      currentTrack.audio.currentTime = 0;
     }
 
-    // First play Win Battle sound (as the toggle)
-    const winBattleAudio = new Audio("/tracks/Win Battle.mp3");
-    winBattleAudio.volume = volume;
-    setBattleTrackInfo({ title: "Win Battle", tag: "Battle" });
-    setIsPlaying(true);
-    setBattleAudio(winBattleAudio);
+    if (battleAudio) {
+      // If battle audio is already playing, restart the last played sound
+      battleAudio.pause();
+      battleAudio.currentTime = 0;
+      battleAudio.play();
+    } else {
+      // If no battle audio is playing, start a new one
+      const winBattleAudio = new Audio(`/sounds/${selectedSound}`);
+      winBattleAudio.volume = volume;
+      setBattleTrackInfo({ title: "pre Battle", tag: "Battle" });
+      setIsPlaying(true);
+      setBattleAudio(winBattleAudio);
 
-    winBattleAudio.play();
+      winBattleAudio.play();
 
-    // When toggle sound ends, play random combat track
-    winBattleAudio.onended = () => {
-      // Play random combat track
-      const combatTracks = [
-        { src: "/tracks/COMBAT01.MP3", title: "Combat 01", tag: "Battle" },
-        { src: "/tracks/COMBAT02.MP3", title: "Combat 02", tag: "Battle" },
-        { src: "/tracks/COMBAT03.MP3", title: "Combat 03", tag: "Battle" },
-        { src: "/tracks/COMBAT04.MP3", title: "Combat 04", tag: "Battle" },
-      ];
-      const randomTrackIndex = Math.floor(Math.random() * combatTracks.length);
-      const selectedTrack = combatTracks[randomTrackIndex];
+      // When toggle sound ends, play random combat track
+      winBattleAudio.onended = () => {
+        // Play random combat track
+        const combatTracks = [
+          { src: "/tracks/COMBAT01.MP3", title: "Combat 01", tag: "Battle" },
+          { src: "/tracks/COMBAT02.MP3", title: "Combat 02", tag: "Battle" },
+          { src: "/tracks/COMBAT03.MP3", title: "Combat 03", tag: "Battle" },
+          { src: "/tracks/COMBAT04.MP3", title: "Combat 04", tag: "Battle" },
+        ];
+        const randomTrackIndex = Math.floor(
+          Math.random() * combatTracks.length
+        );
+        const selectedTrack = combatTracks[randomTrackIndex];
 
-      const combatAudio = new Audio(selectedTrack.src);
-      combatAudio.volume = volume;
+        const combatAudio = new Audio(selectedTrack.src);
+        combatAudio.volume = volume;
 
-      // When combat track ends, clear battle state
-      combatAudio.onended = () => {
-        setBattleAudio(null);
-        setBattleTrackInfo(null);
-        setIsPlaying(false);
+        // When combat track ends, clear battle state
+        combatAudio.onended = () => {
+          setBattleAudio(null);
+          setBattleTrackInfo(null);
+          setIsPlaying(false);
+        };
+
+        combatAudio.play();
+        setBattleAudio(combatAudio);
+        setBattleTrackInfo(selectedTrack);
       };
-
-      combatAudio.play();
-      setBattleAudio(combatAudio);
-      setBattleTrackInfo(selectedTrack);
-    };
+    }
   };
 
   // Determine which track info to display
@@ -359,13 +387,14 @@ function Player({ currentTrack }) {
               <div className="flex flex-col items-center">
                 <button
                   onClick={playBattleMusic}
-                  className={`text-yellow-500 hover:text-yellow-400 transition-colors mb-1 ${
-                    battleAudio ? "opacity-50 cursor-not-allowed" : ""
-                  }`}
+                  className="text-yellow-500 hover:text-yellow-400 transition-colors mb-1"
                   title="Play Battle Music"
-                  disabled={!!battleAudio}
                 >
-                  <GiCrossedSwords className="text-xl" />
+                  {battleAudio ? (
+                    <GiSwordClash className="text-xl" />
+                  ) : (
+                    <GiCrossedSwords className="text-xl" />
+                  )}
                 </button>
                 <span className="text-yellow-500 text-[8px]">Battle</span>
               </div>

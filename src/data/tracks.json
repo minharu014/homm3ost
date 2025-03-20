@@ -1,254 +1,6 @@
 [
   {
     "id": "1",
-    "title": "Win Scenario",
-    "tag": "Scenario",
-    "duration": "01:10",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/Win Scenario.mp3"
-  },
-  {
-    "id": "2",
-    "title": "UltimateLose",
-    "tag": "Battle",
-    "duration": "00:24",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/UltimateLose.mp3"
-  },
-  {
-    "id": "3",
-    "title": "Underground",
-    "tag": "Terrain",
-    "duration": "01:48",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/Underground.mp3"
-  },
-  {
-    "id": "4",
-    "title": "WATER",
-    "tag": "Terrain",
-    "duration": "01:42",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/WATER.MP3"
-  },
-  {
-    "id": "5",
-    "title": "Win Battle",
-    "tag": "Battle",
-    "duration": "00:09",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/Win Battle.mp3"
-  },
-  {
-    "id": "6",
-    "title": "StrongHold",
-    "tag": "Town",
-    "duration": "02:06",
-    "picture": "/images/trackimg/stronghold.jpg",
-    "src": "/tracks/StrongHold.mp3"
-  },
-  {
-    "id": "7",
-    "title": "Surrender Battle",
-    "tag": "Battle",
-    "duration": "00:08",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/Surrender Battle.mp3"
-  },
-  {
-    "id": "8",
-    "title": "SWAMP",
-    "tag": "Terrain",
-    "duration": "02:12",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/SWAMP.MP3"
-  },
-  {
-    "id": "9",
-    "title": "Tower",
-    "tag": "Town",
-    "duration": "03:24",
-    "picture": "/images/trackimg/tower.jpg",
-    "src": "/tracks/TowerTown.mp3"
-  },
-  {
-    "id": "10",
-    "title": "ROUGH",
-    "tag": "Terrain",
-    "duration": "02:06",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/ROUGH.MP3"
-  },
-  {
-    "id": "11",
-    "title": "SAND",
-    "tag": "Terrain",
-    "duration": "01:54",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/SAND.MP3"
-  },
-  {
-    "id": "12",
-    "title": "SecretTheme",
-    "tag": "Theme",
-    "duration": "01:10",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/SecretTheme.mp3"
-  },
-  {
-    "id": "13",
-    "title": "SNOW",
-    "tag": "Terrain",
-    "duration": "01:54",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/SNOW.MP3"
-  },
-  {
-    "id": "14",
-    "title": "Necropolis",
-    "tag": "Town",
-    "duration": "02:18",
-    "picture": "/images/trackimg/necro.jpg",
-    "src": "/tracks/necroTown.mp3"
-  },
-  {
-    "id": "15",
-    "title": "NeutralTheme",
-    "tag": "Theme",
-    "duration": "01:30",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/NeutralTheme.mp3"
-  },
-  {
-    "id": "16",
-    "title": "Rampart",
-    "tag": "Town",
-    "duration": "02:30",
-    "picture": "/images/trackimg/rampart.jpg",
-    "src": "/tracks/RAMPART.MP3"
-  },
-  {
-    "id": "17",
-    "title": "Retreat Battle",
-    "tag": "Battle",
-    "duration": "00:10",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/Retreat Battle.mp3"
-  },
-  {
-    "id": "18",
-    "title": "Lose Campain",
-    "tag": "Battle",
-    "duration": "00:35",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/Lose Campain.mp3"
-  },
-  {
-    "id": "19",
-    "title": "LoseCastle",
-    "tag": "Battle",
-    "duration": "00:08",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/LoseCastle.mp3"
-  },
-  {
-    "id": "20",
-    "title": "LoseCombat",
-    "tag": "Battle",
-    "duration": "00:11",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/LoseCombat.mp3"
-  },
-  {
-    "id": "21",
-    "title": "MAINMENU",
-    "tag": "Menu",
-    "duration": "01:10",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/MAINMENU.MP3"
-  },
-  {
-    "id": "22",
-    "title": "GRASS",
-    "tag": "Terrain",
-    "duration": "01:54",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/GRASS.MP3"
-  },
-  {
-    "id": "23",
-    "title": "Inferno",
-    "tag": "Town",
-    "duration": "02:06",
-    "picture": "/images/trackimg/inferno.jpg",
-    "src": "/tracks/InfernoTown.mp3"
-  },
-  {
-    "id": "24",
-    "title": "LAVA",
-    "tag": "Terrain",
-    "duration": "01:42",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/LAVA.MP3"
-  },
-  {
-    "id": "25",
-    "title": "LoopLepr",
-    "tag": "Loop",
-    "duration": "00:08",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/LoopLepr.mp3"
-  },
-  {
-    "id": "26",
-    "title": "Dungeon",
-    "tag": "Town",
-    "duration": "02:06",
-    "picture": "/images/trackimg/dungeon.jpg",
-    "src": "/tracks/DUNGEON.MP3"
-  },
-  {
-    "id": "27",
-    "title": "Conflux",
-    "tag": "Town",
-    "duration": "01:18",
-    "picture": "/images/trackimg/conflux.jpg",
-    "src": "/tracks/ElemTown.mp3"
-  },
-  {
-    "id": "28",
-    "title": "EvilTheme",
-    "tag": "Theme",
-    "duration": "01:24",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/EvilTheme.mp3"
-  },
-  {
-    "id": "29",
-    "title": "Fortress",
-    "tag": "Town",
-    "duration": "01:48",
-    "picture": "/images/trackimg/fortress.jpg",
-    "src": "/tracks/FortressTown.mp3"
-  },
-  {
-    "id": "30",
-    "title": "GoodTheme",
-    "tag": "Theme",
-    "duration": "01:12",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/GoodTheme.mp3"
-  },
-  {
-    "id": "31",
-    "title": "COMBAT04",
-    "tag": "Battle",
-    "duration": "03:00",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/COMBAT04.MP3"
-  },
-  {
-    "id": "32",
     "title": "Castle",
     "tag": "Town",
     "duration": "02:24",
@@ -256,15 +8,175 @@
     "src": "/tracks/CstleTown.mp3"
   },
   {
-    "id": "33",
-    "title": "Defend Castle",
-    "tag": "Battle",
-    "duration": "00:15",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/Defend Castle.mp3"
+    "id": "2",
+    "title": "Rampart",
+    "tag": "Town",
+    "duration": "02:30",
+    "picture": "/images/trackimg/rampart.jpg",
+    "src": "/tracks/RAMPART.MP3"
   },
   {
-    "id": "34",
+    "id": "3",
+    "title": "Tower",
+    "tag": "Town",
+    "duration": "03:24",
+    "picture": "/images/trackimg/tower.jpg",
+    "src": "/tracks/TowerTown.mp3"
+  },
+  {
+    "id": "4",
+    "title": "Inferno",
+    "tag": "Town",
+    "duration": "02:06",
+    "picture": "/images/trackimg/inferno.jpg",
+    "src": "/tracks/InfernoTown.mp3"
+  },
+  {
+    "id": "5",
+    "title": "Necropolis",
+    "tag": "Town",
+    "duration": "02:18",
+    "picture": "/images/trackimg/necro.jpg",
+    "src": "/tracks/necroTown.mp3"
+  },
+  {
+    "id": "6",
+    "title": "Dungeon",
+    "tag": "Town",
+    "duration": "02:06",
+    "picture": "/images/trackimg/dungeon.jpg",
+    "src": "/tracks/DUNGEON.MP3"
+  },
+  {
+    "id": "7",
+    "title": "StrongHold",
+    "tag": "Town",
+    "duration": "02:06",
+    "picture": "/images/trackimg/stronghold.jpg",
+    "src": "/tracks/StrongHold.mp3"
+  },
+  {
+    "id": "8",
+    "title": "Fortress",
+    "tag": "Town",
+    "duration": "01:48",
+    "picture": "/images/trackimg/fortress.jpg",
+    "src": "/tracks/FortressTown.mp3"
+  },
+  {
+    "id": "9",
+    "title": "Conflux",
+    "tag": "Town",
+    "duration": "01:18",
+    "picture": "/images/trackimg/conflux.jpg",
+    "src": "/tracks/ElemTown.mp3"
+  },
+  {
+    "id": "10",
+    "title": "Win Scenario",
+    "tag": "Scenario",
+    "duration": "01:10",
+    "picture": "/images/default-track.jpg",
+    "src": "/tracks/Win Scenario.mp3"
+  },
+  {
+    "id": "11",
+    "title": "Underground",
+    "tag": "Terrain",
+    "duration": "01:48",
+    "picture": "/images/default-track.jpg",
+    "src": "/tracks/Underground.mp3"
+  },
+  {
+    "id": "12",
+    "title": "WATER",
+    "tag": "Terrain",
+    "duration": "01:42",
+    "picture": "/images/default-track.jpg",
+    "src": "/tracks/WATER.MP3"
+  },
+  {
+    "id": "13",
+    "title": "Win Battle",
+    "tag": "Battle",
+    "duration": "00:09",
+    "picture": "/images/default-track.jpg",
+    "src": "/tracks/Win Battle.mp3"
+  },
+  {
+    "id": "14",
+    "title": "SWAMP",
+    "tag": "Terrain",
+    "duration": "02:12",
+    "picture": "/images/default-track.jpg",
+    "src": "/tracks/SWAMP.MP3"
+  },
+  {
+    "id": "15",
+    "title": "ROUGH",
+    "tag": "Terrain",
+    "duration": "02:06",
+    "picture": "/images/default-track.jpg",
+    "src": "/tracks/ROUGH.MP3"
+  },
+  {
+    "id": "16",
+    "title": "SAND",
+    "tag": "Terrain",
+    "duration": "01:54",
+    "picture": "/images/default-track.jpg",
+    "src": "/tracks/SAND.MP3"
+  },
+  {
+    "id": "17",
+    "title": "SNOW",
+    "tag": "Terrain",
+    "duration": "01:54",
+    "picture": "/images/default-track.jpg",
+    "src": "/tracks/SNOW.MP3"
+  },
+  {
+    "id": "18",
+    "title": "LoseCastle",
+    "tag": "Battle",
+    "duration": "00:08",
+    "picture": "/images/default-track.jpg",
+    "src": "/tracks/LoseCastle.mp3"
+  },
+  {
+    "id": "19",
+    "title": "LoseCombat",
+    "tag": "Battle",
+    "duration": "00:11",
+    "picture": "/images/default-track.jpg",
+    "src": "/tracks/LoseCombat.mp3"
+  },
+  {
+    "id": "20",
+    "title": "MAINMENU",
+    "tag": "Menu",
+    "duration": "01:10",
+    "picture": "/images/default-track.jpg",
+    "src": "/tracks/MAINMENU.MP3"
+  },
+  {
+    "id": "21",
+    "title": "GRASS",
+    "tag": "Terrain",
+    "duration": "01:54",
+    "picture": "/images/default-track.jpg",
+    "src": "/tracks/GRASS.MP3"
+  },
+  {
+    "id": "22",
+    "title": "LAVA",
+    "tag": "Terrain",
+    "duration": "01:42",
+    "picture": "/images/default-track.jpg",
+    "src": "/tracks/LAVA.MP3"
+  },
+  {
+    "id": "23",
     "title": "DIRT",
     "tag": "Terrain",
     "duration": "01:54",
@@ -272,15 +184,7 @@
     "src": "/tracks/DIRT.MP3"
   },
   {
-    "id": "35",
-    "title": "CampainMusic11",
-    "tag": "Campaign",
-    "duration": "01:30",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/CampainMusic11.mp3"
-  },
-  {
-    "id": "36",
+    "id": "24",
     "title": "COMBAT01",
     "tag": "Battle",
     "duration": "02:36",
@@ -288,7 +192,7 @@
     "src": "/tracks/COMBAT01.MP3"
   },
   {
-    "id": "37",
+    "id": "25",
     "title": "COMBAT02",
     "tag": "Battle",
     "duration": "02:24",
@@ -296,7 +200,7 @@
     "src": "/tracks/COMBAT02.MP3"
   },
   {
-    "id": "38",
+    "id": "26",
     "title": "COMBAT03",
     "tag": "Battle",
     "duration": "02:12",
@@ -304,119 +208,23 @@
     "src": "/tracks/COMBAT03.MP3"
   },
   {
-    "id": "39",
-    "title": "CampainMusic07",
-    "tag": "Campaign",
-    "duration": "00:42",
+    "id": "27",
+    "title": "COMBAT04",
+    "tag": "Battle",
+    "duration": "03:00",
     "picture": "/images/default-track.jpg",
-    "src": "/tracks/CampainMusic07.mp3"
+    "src": "/tracks/COMBAT04.MP3"
   },
   {
-    "id": "40",
-    "title": "CampainMusic08",
-    "tag": "Campaign",
-    "duration": "00:49",
+    "id": "28",
+    "title": "Defend Castle",
+    "tag": "Battle",
+    "duration": "00:15",
     "picture": "/images/default-track.jpg",
-    "src": "/tracks/CampainMusic08.mp3"
+    "src": "/tracks/Defend Castle.mp3"
   },
   {
-    "id": "41",
-    "title": "CampainMusic09",
-    "tag": "Campaign",
-    "duration": "00:48",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/CampainMusic09.mp3"
-  },
-  {
-    "id": "42",
-    "title": "CampainMusic10",
-    "tag": "Campaign",
-    "duration": "01:10",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/CampainMusic10.mp3"
-  },
-  {
-    "id": "43",
-    "title": "CampainMusic02",
-    "tag": "Campaign",
-    "duration": "01:10",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/CampainMusic02.mp3"
-  },
-  {
-    "id": "44",
-    "title": "CampainMusic03",
-    "tag": "Campaign",
-    "duration": "00:53",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/CampainMusic03.mp3"
-  },
-  {
-    "id": "45",
-    "title": "CampainMusic04",
-    "tag": "Campaign",
-    "duration": "00:42",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/CampainMusic04.mp3"
-  },
-  {
-    "id": "46",
-    "title": "CampainMusic05",
-    "tag": "Campaign",
-    "duration": "00:42",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/CampainMusic05.mp3"
-  },
-  {
-    "id": "47",
-    "title": "CampainMusic06",
-    "tag": "Campaign",
-    "duration": "00:43",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/CampainMusic06.mp3"
-  },
-  {
-    "id": "48",
-    "title": "BladeDSCampaign",
-    "tag": "Campaign",
-    "duration": "00:56",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/BladeDSCampaign.mp3"
-  },
-  {
-    "id": "49",
-    "title": "BladeFLCampaign",
-    "tag": "Campaign",
-    "duration": "00:47",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/BladeFLCampaign.mp3"
-  },
-  {
-    "id": "50",
-    "title": "BladeFWCampaign",
-    "tag": "Campaign",
-    "duration": "00:53",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/BladeFWCampaign.mp3"
-  },
-  {
-    "id": "51",
-    "title": "BladePFCampaign",
-    "tag": "Campaign",
-    "duration": "01:10",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/BladePFCampaign.mp3"
-  },
-  {
-    "id": "52",
-    "title": "CampainMusic01",
-    "tag": "Campaign",
-    "duration": "00:46",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/CampainMusic01.mp3"
-  },
-  {
-    "id": "53",
+    "id": "29",
     "title": "AITHEME1",
     "tag": "Theme",
     "duration": "00:51",
@@ -424,7 +232,7 @@
     "src": "/tracks/AITHEME1.MP3"
   },
   {
-    "id": "54",
+    "id": "30",
     "title": "AITHEME2",
     "tag": "Theme",
     "duration": "01:48",
@@ -432,23 +240,7 @@
     "src": "/tracks/AITHEME2.MP3"
   },
   {
-    "id": "55",
-    "title": "BladeABCampaign",
-    "tag": "Campaign",
-    "duration": "02:06",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/BladeABCampaign.mp3"
-  },
-  {
-    "id": "56",
-    "title": "BladeDBCampaign",
-    "tag": "Campaign",
-    "duration": "00:55",
-    "picture": "/images/default-track.jpg",
-    "src": "/tracks/BladeDBCampaign.mp3"
-  },
-  {
-    "id": "57",
+    "id": "31",
     "title": "AITheme0",
     "tag": "Theme",
     "duration": "00:45",

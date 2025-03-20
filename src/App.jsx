@@ -3,6 +3,7 @@ import TrackCard from "./components/TrackCard";
 import Player from "./components/Player";
 import "@fontsource/cinzel";
 import tracksData from "./data/tracks.json";
+import CombatDock from "./components/CombatDock";
 
 function App() {
   const [currentTrack, setCurrentTrack] = useState(null);
@@ -53,8 +54,11 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header/Nav with Logo */}
-      <header className="w-full py-3 px-6">
+      {/* CombatDock now at the top, above everything */}
+      <CombatDock />
+
+      {/* Header/Nav with Logo - add some top padding to account for the fixed dock */}
+      <header className="w-full py-3 px-6 mt-16">
         <div className="max-w-screen-xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-6">
             <img
@@ -69,8 +73,9 @@ function App() {
         </div>
       </header>
       <hr className="border-amber-50 opacity-35 py-2"></hr>
+
       {/* Main Content Area */}
-      <main className="flex-1 overflow-y-auto px-6 pb-24">
+      <main className="flex-1 overflow-y-auto px-6 pb-24 mb-24">
         <div className="max-w-screen-xl mx-auto">
           {/* Grid of Cards */}
           {groupedTracks.map((group, index) => (
@@ -99,6 +104,7 @@ function App() {
         </div>
       </main>
 
+      {/* Player remains at the bottom */}
       <Player currentTrack={currentTrack} />
     </div>
   );

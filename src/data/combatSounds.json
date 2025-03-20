@@ -1,0 +1,26 @@
+[
+  {
+    "id": "attack",
+    "title": "Attack",
+    "src": "/sounds/attack.mp3",
+    "description": "Weapon impact sound"
+  },
+  {
+    "id": "spell",
+    "title": "Spell",
+    "src": "/sounds/spell.mp3",
+    "description": "Magic casting sound"
+  },
+  {
+    "id": "flee",
+    "title": "Flee",
+    "src": "/sounds/flee.mp3",
+    "description": "Retreat sound effect"
+  },
+  {
+    "id": "die",
+    "title": "Die",
+    "src": "/sounds/die.mp3",
+    "description": "Death sound effect"
+  }
+]

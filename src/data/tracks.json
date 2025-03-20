@@ -76,7 +76,7 @@
     "title": "Win Scenario",
     "tag": "Scenario",
     "duration": "01:10",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/WIN.jpg",
     "src": "/tracks/Win Scenario.mp3"
   },
   {
@@ -84,7 +84,7 @@
     "title": "Underground",
     "tag": "Terrain",
     "duration": "01:48",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/UNDERGROUND.jpg",
     "src": "/tracks/Underground.mp3"
   },
   {
@@ -92,7 +92,7 @@
     "title": "WATER",
     "tag": "Terrain",
     "duration": "01:42",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/water.jpg",
     "src": "/tracks/WATER.MP3"
   },
   {
@@ -100,7 +100,7 @@
     "title": "Win Battle",
     "tag": "Battle",
     "duration": "00:09",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/WIN.jpg",
     "src": "/tracks/Win Battle.mp3"
   },
   {
@@ -108,7 +108,7 @@
     "title": "SWAMP",
     "tag": "Terrain",
     "duration": "02:12",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/SWAMP.jpg",
     "src": "/tracks/SWAMP.MP3"
   },
   {
@@ -116,7 +116,7 @@
     "title": "ROUGH",
     "tag": "Terrain",
     "duration": "02:06",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/DIRT.jpg",
     "src": "/tracks/ROUGH.MP3"
   },
   {
@@ -124,7 +124,7 @@
     "title": "SAND",
     "tag": "Terrain",
     "duration": "01:54",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/SAND.jpg",
     "src": "/tracks/SAND.MP3"
   },
   {
@@ -132,7 +132,7 @@
     "title": "SNOW",
     "tag": "Terrain",
     "duration": "01:54",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/SNOW.jpg",
     "src": "/tracks/SNOW.MP3"
   },
   {
@@ -140,7 +140,7 @@
     "title": "LoseCastle",
     "tag": "Battle",
     "duration": "00:08",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/LOSE.jpg",
     "src": "/tracks/LoseCastle.mp3"
   },
   {
@@ -148,7 +148,7 @@
     "title": "LoseCombat",
     "tag": "Battle",
     "duration": "00:11",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/LOSE.jpg",
     "src": "/tracks/LoseCombat.mp3"
   },
   {
@@ -156,7 +156,7 @@
     "title": "MAINMENU",
     "tag": "Menu",
     "duration": "01:10",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/MAINMENU.jpg",
     "src": "/tracks/MAINMENU.MP3"
   },
   {
@@ -164,7 +164,7 @@
     "title": "GRASS",
     "tag": "Terrain",
     "duration": "01:54",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/GRASS.jpg",
     "src": "/tracks/GRASS.MP3"
   },
   {
@@ -172,7 +172,7 @@
     "title": "LAVA",
     "tag": "Terrain",
     "duration": "01:42",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/LAVA.jpg",
     "src": "/tracks/LAVA.MP3"
   },
   {
@@ -180,7 +180,7 @@
     "title": "DIRT",
     "tag": "Terrain",
     "duration": "01:54",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/DIRT.jpg",
     "src": "/tracks/DIRT.MP3"
   },
   {
@@ -188,7 +188,7 @@
     "title": "COMBAT01",
     "tag": "Battle",
     "duration": "02:36",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/BATTLE00.jpg",
     "src": "/tracks/COMBAT01.MP3"
   },
   {
@@ -196,7 +196,7 @@
     "title": "COMBAT02",
     "tag": "Battle",
     "duration": "02:24",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/BATTLE01.jpg",
     "src": "/tracks/COMBAT02.MP3"
   },
   {
@@ -204,7 +204,7 @@
     "title": "COMBAT03",
     "tag": "Battle",
     "duration": "02:12",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/BATTLE02.jpg",
     "src": "/tracks/COMBAT03.MP3"
   },
   {
@@ -212,7 +212,7 @@
     "title": "COMBAT04",
     "tag": "Battle",
     "duration": "03:00",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/BATTLE03.jpg",
     "src": "/tracks/COMBAT04.MP3"
   },
   {
@@ -220,7 +220,7 @@
     "title": "Defend Castle",
     "tag": "Battle",
     "duration": "00:15",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/BATTLE03.jpg",
     "src": "/tracks/Defend Castle.mp3"
   },
   {
@@ -228,7 +228,7 @@
     "title": "AITHEME1",
     "tag": "Theme",
     "duration": "00:51",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/ai.jpg",
     "src": "/tracks/AITHEME1.MP3"
   },
   {
@@ -236,7 +236,7 @@
     "title": "AITHEME2",
     "tag": "Theme",
     "duration": "01:48",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/ai.jpg",
     "src": "/tracks/AITHEME2.MP3"
   },
   {
@@ -244,7 +244,7 @@
     "title": "AITheme0",
     "tag": "Theme",
     "duration": "00:45",
-    "picture": "/images/default-track.jpg",
+    "picture": "/images/trackimg/ai.jpg",
     "src": "/tracks/AITheme0.mp3"
   }
 ]

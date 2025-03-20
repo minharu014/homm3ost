@@ -8,6 +8,13 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 audio:
-PLCHMOVE - grass moving sound
+CHMPMOVE - grass moving sound
 REGENER - bless kinda sound
 TRESSEAURE - skatt
+BLOODLUS -bloodlust
+BUTTON - clicking sound
+CAVEHEAD - gåta ljud
+HORSE05 - gå ljud
+KILLFADE - hero dö
+BUILDTWN - bygga ljud
+CHEST - chest sound lvl

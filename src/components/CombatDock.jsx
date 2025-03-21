@@ -17,9 +17,15 @@ import {
   GiSwordWound,
   GiMagicSwirl,
   GiRunningNinja,
-  GiDeathSkull,
+  GiHealthPotion,
+  GiHorseHead,
+  GiOpenTreasureChest,
+  GiHorseshoe,
+  GiSkullCrossedBones,
+  GiHypersonicBolt,
 } from "react-icons/gi";
-import combatSounds from "../data/combatSounds.json";
+
+import { FaQuestion, FaPlus } from "react-icons/fa";
 
 function DockItem({
   children,
@@ -30,6 +36,7 @@ function DockItem({
   distance,
   magnification,
   baseItemSize,
+  label,
 }) {
   const ref = useRef(null);
   const isHovered = useMotionValue(0);
@@ -50,24 +57,27 @@ function DockItem({
   const size = useSpring(targetSize, spring);
 
   return (
-    <motion.div
-      ref={ref}
-      style={{
-        width: size,
-        height: size,
-      }}
-      onHoverStart={() => isHovered.set(1)}
-      onHoverEnd={() => isHovered.set(0)}
-      onFocus={() => isHovered.set(1)}
-      onBlur={() => isHovered.set(0)}
-      onClick={onClick}
-      className={`relative inline-flex items-center justify-center rounded-full bg-[#060606] border-yellow-800 border-2 shadow-md ${className}`}
-      tabIndex={0}
-      role="button"
-      aria-haspopup="true"
-    >
-      {Children.map(children, (child) => cloneElement(child, { isHovered }))}
-    </motion.div>
+    <div className="flex flex-col items-center">
+      <motion.div
+        ref={ref}
+        style={{
+          width: size,
+          height: size,
+        }}
+        onHoverStart={() => isHovered.set(1)}
+        onHoverEnd={() => isHovered.set(0)}
+        onFocus={() => isHovered.set(1)}
+        onBlur={() => isHovered.set(0)}
+        onClick={onClick}
+        className={`relative inline-flex items-center justify-center rounded-full bg-[#060606] border-yellow-800 border-2 shadow-md ${className}`}
+        tabIndex={0}
+        role="button"
+        aria-haspopup="true"
+      >
+        {Children.map(children, (child) => cloneElement(child, { isHovered }))}
+      </motion.div>
+      <span className="text-yellow-500 text-[8px] mt-1">{label}</span>
+    </div>
   );
 }
 
@@ -116,8 +126,8 @@ export default function CombatDock({
   spring = { mass: 0.1, stiffness: 150, damping: 12 },
   magnification = 50,
   distance = 200,
-  panelHeight = 60,
-  dockHeight = 120,
+  panelHeight = 70,
+  dockHeight = 130,
   baseItemSize = 40,
 }) {
   const mouseX = useMotionValue(Infinity);
@@ -130,14 +140,33 @@ export default function CombatDock({
   const heightRow = useTransform(isHovered, [0, 1], [panelHeight, maxHeight]);
   const height = useSpring(heightRow, spring);
 
-  // Function to play sound effects
-  const playSound = (soundId) => {
-    const sound = combatSounds.find((s) => s.id === soundId);
-    if (sound) {
-      const audio = new Audio(sound.src);
-      audio.volume = 0.7; // Set default volume
-      audio.play();
+  // Improved function to play sound effects
+  const playSound = (soundFile, options = {}) => {
+    // Stop any currently playing background music (handled in Player.jsx)
+    if (window.currentAudio) {
+      window.currentAudio.pause();
+      window.currentAudio = null;
     }
+
+    const { repeat = 1, volume = 0.4, delay = 0 } = options;
+
+    // Function to play the sound once
+    const playSingleSound = (index = 0) => {
+      const audio = new Audio(soundFile);
+      audio.volume = volume;
+
+      // If this is not the last repeat, set up to play the next one
+      if (index < repeat - 1) {
+        audio.onended = () => {
+          setTimeout(() => playSingleSound(index + 1), delay);
+        };
+      }
+
+      audio.play();
+    };
+
+    // Start playing the sound (possibly multiple times)
+    playSingleSound();
   };
 
   // Define combat items with their icons, labels, and sound effects
@@ -145,26 +174,62 @@ export default function CombatDock({
     {
       icon: <GiSwordWound size={24} />,
       label: "Attack",
-      onClick: () => playSound("attack"),
+      onClick: () => playSound("/sounds/CHMPKILL.mp3"),
       className: "hover:border-red-700 active:bg-red-900/20",
+    },
+    {
+      icon: <GiHypersonicBolt size={24} />,
+      label: "Bolt",
+      onClick: () => playSound("/sounds/ZELTSHOT.mp3"),
+      className: "hover:border-blue-700 active:bg-blue-900/20",
     },
     {
       icon: <GiMagicSwirl size={24} />,
       label: "Spell",
-      onClick: () => playSound("spell"),
+      onClick: () => playSound("/sounds/REGENER.mp3"),
       className: "hover:border-blue-700 active:bg-blue-900/20",
     },
     {
-      icon: <GiRunningNinja size={24} />,
-      label: "Flee",
-      onClick: () => playSound("flee"),
+      icon: <GiHealthPotion size={24} />,
+      label: "Buff",
+      onClick: () => playSound("/sounds/BLOODLUS.mp3"),
+      className: "hover:border-purple-700 active:bg-purple-900/20",
+    },
+    {
+      icon: <FaQuestion size={24} />,
+      label: "Quest",
+      onClick: () => playSound("/sounds/CAVEHEAD.mp3"),
+      className: "hover:border-yellow-700 active:bg-yellow-900/20",
+    },
+    {
+      icon: <GiHorseHead size={24} />,
+      label: "Horse",
+      onClick: () => playSound("/sounds/HORSE05.mp3", { repeat: 3 }),
+      className: "hover:border-brown-700 active:bg-orange-900/20",
+    },
+    {
+      icon: <GiSkullCrossedBones size={24} />,
+      label: "Death",
+      onClick: () => playSound("/sounds/KILLFADE.mp3"),
+      className: "hover:border-gray-700 active:bg-gray-900/20",
+    },
+    {
+      icon: <FaPlus size={24} />,
+      label: "Build",
+      onClick: () => playSound("/sounds/BUILDTWN.mp3"),
       className: "hover:border-green-700 active:bg-green-900/20",
     },
     {
-      icon: <GiDeathSkull size={24} />,
-      label: "Die",
-      onClick: () => playSound("die"),
-      className: "hover:border-purple-700 active:bg-purple-900/20",
+      icon: <GiOpenTreasureChest size={24} />,
+      label: "Chest",
+      onClick: () => playSound("/sounds/CHEST.mp3"),
+      className: "hover:border-amber-700 active:bg-amber-900/20",
+    },
+    {
+      icon: <GiHorseshoe size={24} />,
+      label: "Level",
+      onClick: () => playSound("/sounds/TREASURE.mp3"),
+      className: "hover:border-yellow-400 active:bg-yellow-900/20",
     },
   ];
 
@@ -197,6 +262,7 @@ export default function CombatDock({
             distance={distance}
             magnification={magnification}
             baseItemSize={baseItemSize}
+            label={item.label}
           >
             <DockIcon>{item.icon}</DockIcon>
             <DockLabel>{item.label}</DockLabel>

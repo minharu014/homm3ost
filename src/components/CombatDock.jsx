@@ -123,8 +123,8 @@ function DockIcon({ children, className = "" }) {
 
 export default function CombatDock({
   className = "",
-  spring = { mass: 0.1, stiffness: 150, damping: 12 },
-  magnification = 50,
+  spring = { mass: 0.1, stiffness: 100, damping: 12 },
+  magnification = 40,
   distance = 200,
   panelHeight = 70,
   dockHeight = 130,

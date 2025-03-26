@@ -148,7 +148,7 @@ export default function CombatDock({
       window.currentAudio = null;
     }
 
-    const { repeat = 1, volume = 0.4, delay = 0 } = options;
+    const { repeat = 1, volume = 0.35, delay = 0 } = options;
 
     // Function to play the sound once
     const playSingleSound = (index = 0) => {

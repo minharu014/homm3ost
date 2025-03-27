@@ -80,7 +80,7 @@ function App() {
           {/* Grid of Cards */}
           {groupedTracks.map((group, index) => (
             <div key={group.tag}>
-              <h2 className="text-yellow-500 font-cinzel font-medium text-lg mb-2">
+              <h2 className="text-yellow-200 font-cinzel font-medium text-xs mb-2">
                 {group.tag}
               </h2>
               <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3">

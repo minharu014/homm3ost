@@ -4,7 +4,7 @@
 
 ## Overview
 
-A responsive web player for the Heroes of Might and Magic III soundtrack. This application features an immersive interface with various sound elements from the iconic game:
+A responsive web player for the Heroes of Might and Magic III soundtrack, made for boardgame cuz official one is a bit lackluster. This application features an immersive interface with various sound elements from the iconic game:
 
 - **Music Player**: Browse and play all HOMM3 tracks organized by category
 - **Sound Effects**: Quick access to battle and combat sounds via the dock
@@ -26,19 +26,6 @@ A responsive web player for the Heroes of Might and Magic III soundtrack. This a
 - Tailwind CSS for styling
 - React Icons
 
-## Getting Started
-
-1. Clone this repository
-2. Install dependencies:
-   ```
-   npm install
-   ```
-3. Run the development server:
-   ```
-   npm run dev
-   ```
-4. Open your browser to `http://localhost:5173`
-
 ## How to Use
 
 - Use the top dock for quick sound effects during gameplay
@@ -50,11 +37,9 @@ A responsive web player for the Heroes of Might and Magic III soundtrack. This a
 ## License
 
 This project is for educational purposes only. All sound assets belong to Ubisoft/3DO and are part of Heroes of Might and Magic III.
+I OWN NOTHINGGGGGGGGGGGGGGGGGGGGGGGGGGG
+FANPROJECT!!!!!!!!!!!!!!!
 
 ## Acknowledgments
 
 Special thanks to the composers of the original HOMM3 soundtrack, including Paul Romero, Rob King, and Steve Baca.
-
----
-
-_For the Horn of the Abyss!_
